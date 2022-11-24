@@ -2,32 +2,33 @@ import React from "react";
 import "./HamburgerMenu.css";
 import { useState } from "react";
 
-const HamburgerMenu = () => {
-  const [burger_class, setBurgerClass] = useState("burger-bar unclicked");
-  const [menu_class, setMenuClass] = useState("menu hidden");
-  const [isMenuClicked, setIsMenuClicked] = useState(false);
+function HamburgerMenu() {
+  const [open, setOpen] = useState(false);
 
-  const updateMenu = () => {
-    if (!isMenuClicked) {
-      setBurgerClass("burger-bar clicked");
-      setMenuClass("menu visible");
-    } else {
-      setBurgerClass("burger-bar unclicked");
-      setMenuClass("menu hidden");
-    }
+  const toggleMenu = () => {
+    setOpen(!open);
   };
+
   return (
     <div style={{ width: "100%", height: "100vh" }}>
-      <nav>
-        <div className="burger-menu">
-          <div className={burger_class} onClick={updateMenu}></div>
-          <div className={burger_class} onClick={updateMenu}></div>
-          <div className={burger_class} onClick={updateMenu}></div>
-        </div>
-      </nav>
-      <div></div>
+      <div className="burger-menu" onClick={toggleMenu}>
+        <div className={`burger-bar ${open ? "clicked" : "unclicked"}`} />
+        <div className={`burger-bar ${open ? "clicked" : "unclicked"}`} />
+        <div className={`burger-bar ${open ? "clicked" : "unclicked"}`} />
+      </div>
+      <div className={`menu ${open ? "open" : "hidden"}`}>
+        <nav>
+          <ul>
+            <li>HOME</li>
+            <li>Pays</li>
+            <li>Catégories</li>
+            <li>Ingrédients</li>
+            <li>Idées</li>
+          </ul>
+        </nav>
+      </div>
     </div>
   );
-};
+}
 
 export default HamburgerMenu;
