@@ -1,9 +1,10 @@
 import React from "react";
+import CardPays from "@components/CardPays/CardPays";
 
 function App() {
   return (
-    <div className="App">
-      
+    <div>
+      <CardPays />
     </div>
   );
 }
