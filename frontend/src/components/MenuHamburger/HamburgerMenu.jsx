@@ -19,7 +19,7 @@ function HamburgerMenu() {
       <div className={`menu ${open ? "open" : "hidden"}`}>
         <nav>
           <ul>
-            <li>HOME</li>
+            <li>Home</li>
             <li>Pays</li>
             <li>Catégories</li>
             <li>Ingrédients</li>
