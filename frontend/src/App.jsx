@@ -5,11 +5,17 @@ import CardPays from "@components/CardPays/CardPays";
 
 function App() {
   return (
-    <div className="App">
-      <CardPays />
-      <CardMeal />
-      <Navbar />
-    </div>
+    <>
+      <div>
+        <CardPays />
+      </div>
+      <div>
+        <CardMeal />
+      </div>
+      <div>
+        <Navbar />
+      </div>
+    </>
   );
 }
 

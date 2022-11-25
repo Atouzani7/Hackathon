@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./Cardpays.css";
+import "./CardPays.css";
 import axios from "axios";
 
 export default function CardPays() {
@@ -13,16 +13,17 @@ export default function CardPays() {
   }, []);
 
   return (
-    <>
+    <section className="container-1">
       {cardPays.map((pays) => {
         const country = pays.strArea;
         return (
           <img
+            className="card-2 card-images car-2"
             src={`/src/components/CardPays/assets/${country}.webp`}
             alt={country}
           />
         );
       })}
-    </>
+    </section>
   );
 }

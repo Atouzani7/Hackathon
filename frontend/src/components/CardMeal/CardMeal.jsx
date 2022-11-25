@@ -8,10 +8,10 @@ function CardMeal() {
   return mealDatas.map((mealData) => {
     return (
       <div key={mealData.idMeal}>
-        <div className="container" />
-        <div className="card">
+        <div className="container-2" />
+        <div className="card-1">
           <img
-            className="card-image car-1"
+            className="card-image-1 car-1"
             src={mealData.strMealThumb}
             alt={mealData.strMealThumb}
           />

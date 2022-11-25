@@ -1,50 +1,24 @@
-.container {
-  margin-top: 7%;
-  width: 100vw;
+.container-1 {
+  margin-top: 50%;
+  height: 250px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-.container .card {
+.container-1 .card-2 {
   height: auto;
-  max-width: 25px;
-  transform-origin: center;
-  transform: perspective(800px) rotateY(30deg);
-  transition: 0.7s;
-  -webkit-box-reflect: below 1px
-    linear-gradient(transparent, transparent, #0004);
-  background: rgb(249, 248, 248);
-  width: 200px;
-  margin: 5px;
+  max-width: 250px;
+  width: 250px;
+  margin: 10px;
   border-radius: 10px;
 }
 
-.container:hover .card {
-  opacity: 0.1;
-}
-
-.container .card:hover {
-  transform: perspective(800px) rotateY(0deg);
-  opacity: 1;
-}
-
-.card-image {
-  height: 50px;
-  width: 500px;
+.card-images {
   margin-bottom: 30px;
   background-size: cover;
   border-radius: 10px 10px 10px 10px;
 }
-.car-1 {
+.car-2 {
   background-position: center;
-}
-.card {
-  width: 12px;
-  height: 30px;
-}
-@media screen and (max-width: 900px) {
-  .container {
-    margin-top: 300px;
-    padding: 0;
-  }
 }
