@@ -1,47 +1,17 @@
-.container {
-  margin-top: 7%;
-  width: 100vw;
-  display: flex;
-  justify-content: space-between;
-}
-
-.container .card {
-  height: auto;
-  max-width: 250px;
-  transform-origin: center;
-  transform: perspective(800px) rotateY(30deg);
-  transition: 0.7s;
-  -webkit-box-reflect: below 1px
-    linear-gradient(transparent, transparent, #0004);
-  background: rgb(249, 248, 248);
-  width: 200px;
-  margin: 5px;
-  border-radius: 10px;
-}
-
-.container:hover .card {
-  opacity: 0.1;
-}
-
-.container .card:hover {
-  transform: perspective(800px) rotateY(0deg);
-  opacity: 1;
-}
-
-.card-image {
-  height: 500px;
-  width: 500px;
-  margin-bottom: 30px;
-  background-size: cover;
-  border-radius: 10px 10px 10px 10px;
+.card-image-1 {
+  height: 250px;
+  width: 250px;
 }
 .car-1 {
   background-position: center;
 }
 
-@media screen and (max-width: 900px) {
-  .container {
-    margin-top: 300px;
-    padding: 0;
-  }
+.container-2 {
+  display: grid;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.car-2 {
+  background-position: center;
 }
