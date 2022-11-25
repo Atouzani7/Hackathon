@@ -1,11 +1,12 @@
 import CardPays from "@components/CardPays/CardPays";
+import "../components/CardPays/Cardpays.css";
 
-const Pays = () => {
+function Pays() {
   return (
     <div>
       <CardPays />
     </div>
   );
-};
+}
 
 export default Pays;

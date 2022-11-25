@@ -10,16 +10,16 @@ import Pays from "@pages/Pays";
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path to="/" element={<Home />} />
-        <Route path to="/Idées" element={<Idées />} />
-        <Route path to="/Catégories" element={<Catégories />} />
-        <Route path to="/Ingrédient" element={<Ingrédients />} />
-        <Route path to="/Pays" element={<Pays />} />
-      </Routes>
       <div>
         <Navbar />
       </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Idées" element={<Idées />} />
+        <Route path="/Catégories" element={<Catégories />} />
+        <Route path="/Ingrédient" element={<Ingrédients />} />
+        <Route path="/Pays" element={<Pays />} />
+      </Routes>
     </BrowserRouter>
   );
 }

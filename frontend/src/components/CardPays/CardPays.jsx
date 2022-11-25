@@ -8,7 +8,7 @@ export default function CardPays() {
     axios
       .get("https://www.themealdb.com/api/json/v1/1/list.php?a=list")
       .then(({ data }) => {
-        setCardPays(data.meals);
+        setCardPays(data.meals || []);
       });
   }, []);
 
@@ -21,6 +21,7 @@ export default function CardPays() {
             className="card-2 card-images car-2"
             src={`/src/components/CardPays/assets/${country}.webp`}
             alt={country}
+            key={country}
           />
         );
       })}
