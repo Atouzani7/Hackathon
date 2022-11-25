@@ -1,11 +1,10 @@
-import Navbar from "@components/Navbar/navbar";
-import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "@pages/Home";
 import Idées from "@pages/Idées";
 import Catégories from "@pages/Catégories";
 import Ingrédients from "@pages/Ingrédients";
 import Pays from "@pages/Pays";
+import Navbar from "@components/Navbar/navbar";
 
 function App() {
   return (

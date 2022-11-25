@@ -1,20 +1,17 @@
 .card-image-1 {
   height: 250px;
   width: 250px;
-  margin-bottom: 30px;
-  background-size: cover;
-  border-radius: 10px 10px 10px 10px;
 }
 .car-1 {
   background-position: center;
 }
-.card-1 {
-  display: flex;
 
-  flex-wrap: wrap;
-}
 .container-2 {
   display: grid;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+.car-2 {
+  background-position: center;
 }

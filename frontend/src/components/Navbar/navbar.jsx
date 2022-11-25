@@ -17,7 +17,7 @@ export default function Navbar() {
   };
 
   return (
-    <form>
+    <form onSubmit={resultSearch}>
       <label>
         <input
           type="search"
