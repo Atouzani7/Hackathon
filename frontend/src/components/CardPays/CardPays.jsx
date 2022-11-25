@@ -1,30 +1,28 @@
 import React from "react";
-import "./Cardpays.css";
-import { useState } from "react";
-import { meals } from "../../mealdb.json";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
-function CardPays() {
-  const [mealDatas, setMealDatas] = useState(meals);
+export default function CardPays() {
+  const [cardPays, setCardPays] = useState([]);
+  useEffect(() => {
+    axios
+      .get("https://www.themealdb.com/api/json/v1/1/list.php?a=list")
+      .then(({ data }) => {
+        setCardPays(data.meals);
+      });
+  }, []);
 
-  return mealDatas.map((mealData) => {
-    return (
-      <div key={mealData.idMeal}>
-        <div className="container" />
-        <div className="card">
+  return (
+    <>
+      {cardPays.map((pays) => {
+        const country = pays.strArea;
+        return (
           <img
-            className="card-image car-1"
-            src={mealData.strMealThumb}
-            alt={mealData.strMealThumb}
+            src={`/src/components/CardPays/assets/${country}.webp`}
+            alt={country}
           />
-          <div>
-            <h2>{mealData.strMeal}</h2>
-            <h3>{mealData.strArea}</h3>
-            <h3>{mealData.strCategory}</h3>
-          </div>
-        </div>
-      </div>
-    );
-  });
+        );
+      })}
+    </>
+  );
 }
-
-export default CardPays;
