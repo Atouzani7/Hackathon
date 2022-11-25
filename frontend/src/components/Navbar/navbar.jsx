@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./navbar.css";
-import CardPays from "@components/CardPays/CardPays";
 import raw from "../../mealdb.json";
 
 export default function Navbar() {
@@ -9,6 +8,9 @@ export default function Navbar() {
 
   const resultSearch = (evt) => {
     evt.preventDefault();
+
+    if (searchTerm === "") return setFilteredMeals([]);
+
     setFilteredMeals(
       raw.meals.filter((meal) =>
         meal.strMeal.toLowerCase().includes(searchTerm.toLowerCase())
@@ -36,14 +38,13 @@ export default function Navbar() {
         onClick={resultSearch}
         className="button"
       />
-      <ul>
+      {filteredMeals.length && (
         <ul>
           {filteredMeals.map((meal) => {
             return <li key={meal.strMeal}>{meal.strMeal}</li>;
           })}
         </ul>
-      </ul>
-      <CardPays />
+      )}
     </form>
   );
 }

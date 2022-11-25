@@ -9,6 +9,7 @@ ul {
   overflow: scroll;
   border-radius: 5px;
   width: 70%;
+  background-color: white;
 }
 input {
   border-radius: 15px;
