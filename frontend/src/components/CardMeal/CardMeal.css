@@ -1,0 +1,17 @@
+.card-image-1 {
+  height: 250px;
+  width: 250px;
+}
+.car-1 {
+  background-position: center;
+}
+
+.container-2 {
+  display: grid;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.car-2 {
+  background-position: center;
+}

@@ -1,0 +1,28 @@
+body {
+  background-image: url(../../assets/Background.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+ul {
+  height: 20vh;
+  overflow: scroll;
+  border-radius: 5px;
+  width: 70%;
+}
+input {
+  border-radius: 15px;
+  width: 70%;
+  height: 3vh;
+  margin-top: 8%;
+  margin-left: 4%;
+}
+.button {
+  width: 15%;
+  background-color: rgb(130, 176, 130);
+}
+
+li {
+  overflow: hidden;
+  height: 4vh;
+}
