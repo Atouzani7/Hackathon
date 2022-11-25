@@ -1,5 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+/* eslint-disable-next-line import/no-unresolved */
+import "swiper/css/bundle";
+import "./App.css";
 
 import App from "./App";
 
