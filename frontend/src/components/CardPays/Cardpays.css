@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.card-images {
+  border-radius: 10px;
+  margin: 10px;
+  height: 250px;
+  width: 250px;
+}
+
+.car-2 {
+  background-position: center;
+}
+
+.container-1 {
+  margin-top: 20%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card-2 {
+  background-position: center;
+}

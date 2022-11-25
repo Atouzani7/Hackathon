@@ -17,7 +17,7 @@ export default function Navbar() {
   };
 
   return (
-    <form onSubmit={resultSearch}>
+    <form onSubmit={resultSearch} className="NavBar">
       <label>
         <input
           type="search"
@@ -42,8 +42,8 @@ export default function Navbar() {
             return <li key={meal.strMeal}>{meal.strMeal}</li>;
           })}
         </ul>
-        <CardPays />
       </ul>
+      <CardPays />
     </form>
   );
 }
