@@ -1,11 +1,9 @@
-import Navbar from "@components/Navbar/navbar";
 import React from "react";
-// import CardPays from "@components/CardPays/CardPays";
+import Navbar from "@components/Navbar/navbar";
 
 function App() {
   return (
     <div className="App">
-      {/* <CardPays /> */}
       <Navbar />
     </div>
   );
