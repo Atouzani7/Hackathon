@@ -11,7 +11,7 @@ export default function Navbar() {
 
     if (searchTerm === "") return setFilteredMeals([]);
 
-    setFilteredMeals(
+    return setFilteredMeals(
       raw.meals.filter((meal) =>
         meal.strMeal.toLowerCase().includes(searchTerm.toLowerCase())
       )
@@ -43,7 +43,7 @@ export default function Navbar() {
           {filteredMeals.map((meal) => {
             return (
               <li key={meal.strMeal}>
-                <img className="thumb" src={meal.strMealThumb} />
+                <img className="thumb" src={meal.strMealThumb} alt={meal.strMeal} />
                 {meal.strMeal}
               </li>
             );
