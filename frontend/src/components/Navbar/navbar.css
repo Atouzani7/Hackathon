@@ -10,6 +10,7 @@ ul {
   border-radius: 5px;
   width: 70%;
   background-color: white;
+  margin-left: 4%;
 }
 input {
   border-radius: 15px;
@@ -24,6 +25,11 @@ input {
 }
 
 li {
-  overflow: hidden;
   height: 4vh;
+  display: flex;
+}
+
+.thumb {
+  width: 3rem;
+  height: auto;
 }

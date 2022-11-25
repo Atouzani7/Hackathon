@@ -1,5 +1,6 @@
 import "./CardMeal.css";
 import PropTypes from "prop-types";
+import { useState } from "react";
 
 function CardMeal({ mealData }) {
   return (

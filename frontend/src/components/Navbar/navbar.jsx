@@ -41,7 +41,12 @@ export default function Navbar() {
       {filteredMeals.length && (
         <ul>
           {filteredMeals.map((meal) => {
-            return <li key={meal.strMeal}>{meal.strMeal}</li>;
+            return (
+              <li key={meal.strMeal}>
+                <img className="thumb" src={meal.strMealThumb} />
+                {meal.strMeal}
+              </li>
+            );
           })}
         </ul>
       )}

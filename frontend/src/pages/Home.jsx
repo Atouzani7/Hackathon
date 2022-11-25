@@ -1,18 +1,12 @@
 import CardMeal from "@components/CardMeal/CardMeal";
-import React from "react";
-
-const sample = {
-  strMealThumb: "",
-  strMeal: "Toto",
-  strCategory: "Grophat",
-  strArea: "World",
-  idMeal: "42",
-};
+import { meals } from "../mealdb.json";
 
 function Home() {
   return (
     <div>
-      <CardMeal mealData={sample} />
+      {meals.map((meal) => {
+        return <CardMeal mealData={meal} />;
+      })}
     </div>
   );
 }
