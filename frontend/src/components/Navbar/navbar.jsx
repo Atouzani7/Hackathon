@@ -19,37 +19,43 @@ export default function Navbar() {
   };
 
   return (
-    <form onSubmit={resultSearch} className="NavBar">
-      <label>
+    <>
+      <form onSubmit={resultSearch} className="NavBar">
+        <label>
+          <input
+            type="search"
+            name="Recherche"
+            placeholder="Un ingrédient, un plat ..."
+            id="idMeal"
+            value={searchTerm}
+            onChange={(evt) => {
+              setSearchTerm(evt.target.value);
+            }}
+          />
+        </label>
         <input
-          type="search"
-          name="Recherche"
-          placeholder="Un ingrédient, un plat ..."
-          id="idMeal"
-          value={searchTerm}
-          onChange={(evt) => {
-            setSearchTerm(evt.target.value);
-          }}
+          type="submit"
+          value="Rechercher"
+          onClick={resultSearch}
+          className="button"
         />
-      </label>
-      <input
-        type="submit"
-        value="Rechercher"
-        onClick={resultSearch}
-        className="button"
-      />
-      {filteredMeals.length && (
-        <ul>
-          {filteredMeals.map((meal) => {
-            return (
-              <li key={meal.strMeal}>
-                <img className="thumb" src={meal.strMealThumb} alt={meal.strMeal} />
-                {meal.strMeal}
-              </li>
-            );
-          })}
-        </ul>
-      )}
-    </form>
+        {filteredMeals.length && (
+          <ul>
+            {filteredMeals.map((meal) => {
+              return (
+                <li key={meal.strMeal}>
+                  <img
+                    className="thumb"
+                    src={meal.strMealThumb}
+                    alt={meal.strMeal}
+                  />
+                  {meal.strMeal}
+                </li>
+              );
+            })}
+          </ul>
+        )}
+      </form>
+    </>
   );
 }
