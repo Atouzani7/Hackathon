@@ -1,5 +1,5 @@
-import React from "react";
 import { useState, useEffect } from "react";
+import "./Cardpays.css";
 import axios from "axios";
 
 export default function CardPays() {

@@ -7,7 +7,7 @@
 
 .container .card {
   height: auto;
-  max-width: 250px;
+  max-width: 25px;
   transform-origin: center;
   transform: perspective(800px) rotateY(30deg);
   transition: 0.7s;
@@ -29,7 +29,7 @@
 }
 
 .card-image {
-  height: 500px;
+  height: 50px;
   width: 500px;
   margin-bottom: 30px;
   background-size: cover;
@@ -38,7 +38,10 @@
 .car-1 {
   background-position: center;
 }
-
+.card {
+  width: 12px;
+  height: 30px;
+}
 @media screen and (max-width: 900px) {
   .container {
     margin-top: 300px;
