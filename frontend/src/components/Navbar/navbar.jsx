@@ -1,8 +1,10 @@
 import { useState } from "react";
+import "./navbar.css";
+import CardPays from "@components/CardPays/CardPays";
 import raw from "../../mealdb.json";
 
 export default function Navbar() {
-  const [filteredMeals, setFilteredMeals] = useState(raw.meals);
+  const [filteredMeals, setFilteredMeals] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
   const resultSearch = (evt) => {
@@ -28,11 +30,19 @@ export default function Navbar() {
           }}
         />
       </label>
-      <input type="submit" value="Rechercher" onClick={resultSearch} />
+      <input
+        type="submit"
+        value="Rechercher"
+        onClick={resultSearch}
+        className="button"
+      />
       <ul>
-        {filteredMeals.map((meal) => {
-          return <li key={meal.strMeal}>{meal.strMeal}</li>;
-        })}
+        <ul>
+          {filteredMeals.map((meal) => {
+            return <li key={meal.strMeal}>{meal.strMeal}</li>;
+          })}
+        </ul>
+        <CardPays />
       </ul>
     </form>
   );

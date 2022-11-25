@@ -1,10 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Cardpays.css";
-import { useState } from "react";
 import { meals } from "../../mealdb.json";
 
 function CardPays() {
-  const [mealDatas, setMealDatas] = useState(meals);
+  const [mealDatas] = useState(meals);
 
   return mealDatas.map((mealData) => {
     return (
